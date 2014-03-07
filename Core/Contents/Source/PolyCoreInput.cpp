@@ -229,6 +229,12 @@ namespace Polycode {
 	Vector2 CoreInput::getMousePosition() {
 		return mousePosition;
 	}
+
+	Vector2 CoreInput::getMousePositionScene2D() {
+		mousePosition.x = mousePosition.x - 680/2 + 20;
+		mousePosition.y = -mousePosition.y + 480/2;
+		return mousePosition;
+	}
 	
 	bool CoreInput::getKeyState(PolyKEY keyCode) {
 		if(keyCode < 512)
