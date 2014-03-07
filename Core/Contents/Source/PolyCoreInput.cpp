@@ -231,8 +231,9 @@ namespace Polycode {
 	}
 
 	Vector2 CoreInput::getMousePositionScene2D() {
-		mousePosition.x = mousePosition.x - 680/2 + 20;
-		mousePosition.y = -mousePosition.y + 480/2;
+		Core *core = CoreServices::getInstance()->getCore();
+		mousePosition.x = mousePosition.x - core->getXRes()/4;
+		mousePosition.y = -mousePosition.y + core->getYRes()/2;
 		return mousePosition;
 	}
 	
